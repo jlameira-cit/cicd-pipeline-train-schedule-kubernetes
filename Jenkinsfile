@@ -31,7 +31,7 @@ pipeline {
             }
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'jlameira') {
+                    docker.withRegistry('https://registry.hub.docker.com', 'github_key2') {
                         app.push("${env.BUILD_NUMBER}")
                         app.push("latest")
                     }
